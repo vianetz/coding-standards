@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<ruleset name="Vianetz_CodeSniffer">
+    <!-- This coding standard is based on the Zend Coding Standards but enhanced with several Sniffs from existing
+         Standards -->
+
+    <description>The coding standard for vianetz projects.</description>
+    <exclude-pattern>*/Tests/*</exclude-pattern>
+
+    <!-- Include the whole Zend standard -->
+    <rule ref="Zend"/>
+
+    <!-- Include the whole PSR1+2 standards -->
+    <rule ref="PSR2">
+        <!-- We want to allow class names like 'Vianetz_AdvancedInvoiceLayout_Model_Test' -->
+        <exclude name="Squiz.Classes.ValidClassName"/>
+
+        <!-- Currently we have projects that do not use PSR1 required PHP namespaces so we have to exclude it here. -->
+        <exclude name="PSR1.Classes.ClassDeclaration"/>
+
+        <!-- We want to prefix properties and methods with _ and __ to indicate visibility so we have to exclude it here -->
+        <exclude name="PSR2.Classes.PropertyDeclaration"/>
+        <exclude name="PSR2.Methods.MethodDeclaration"/>
+    </rule>
+
+    <!-- Lines can be 180 chars long, but never show errors -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="180"/>
+            <property name="absoluteLineLimit" value="0"/>
+        </properties>
+    </rule>
+
+    <!-- Use warnings for inline control structures -->
+    <rule ref="Generic.ControlStructures.InlineControlStructure">
+        <properties>
+            <property name="error" value="false"/>
+        </properties>
+    </rule>
+
+    <!-- Include some of the Squiz standard -->
+    <rule ref="Squiz.Commenting.ClassComment" />
+    <rule ref="Squiz.Commenting.FileComment" />
+    <rule ref="Squiz.Commenting.FunctionComment" />
+    <rule ref="Squiz.Commenting.VariableComment" />
+
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+    <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+    <rule ref="Generic.Strings.UnnecessaryStringConcat"/>
+    <rule ref="Zend.Debug.CodeAnalyzer"/>
+
+    <!-- Tweaks to metrics -->
+    <rule ref="Generic.Metrics.CyclomaticComplexity">
+        <properties>
+            <property name="complexity" value="10"/>
+            <property name="absoluteComplexity" value="100"/>
+        </properties>
+    </rule>
+    <rule ref="Generic.Metrics.NestingLevel">
+        <properties>
+            <property name="nestingLevel" value="5"/>
+            <property name="absoluteNestingLevel" value="50"/>
+        </properties>
+    </rule>
+</ruleset>
