@@ -20,6 +20,9 @@
         <!-- We want to prefix properties and methods with _ and __ to indicate visibility so we have to exclude it here -->
         <exclude name="PSR2.Classes.PropertyDeclaration"/>
         <exclude name="PSR2.Methods.MethodDeclaration"/>
+
+        <!-- Exclude requirement for newline at the end of file -->
+        <exclude name="PSR2.Files.EndFileNewline" />
     </rule>
 
     <!-- Lines can be 180 chars long, but never show errors -->
