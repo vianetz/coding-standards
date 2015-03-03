@@ -7,13 +7,14 @@
     <exclude-pattern>*/Tests/*</exclude-pattern>
 
     <!-- Include the whole Zend standard -->
-    <rule ref="Zend"/>
+    <rule ref="Zend">
+        <!-- This Zend standard rule does not recognize private variable names like __camelCase as correct camel case format
+             so we have to exclude it -->
+        <exclude name="Zend.NamingConventions.ValidVariableName"/>
+    </rule>
 
     <!-- Include the whole PSR1+2 standards -->
     <rule ref="PSR2">
-        <!-- We want to allow class names like 'Vianetz_AdvancedInvoiceLayout_Model_Test' -->
-        <exclude name="Squiz.Classes.ValidClassName"/>
-
         <!-- Currently we have projects that do not use PSR1 required PHP namespaces so we have to exclude it here. -->
         <exclude name="PSR1.Classes.ClassDeclaration"/>
 
@@ -43,7 +44,8 @@
     <!-- Include some of the Squiz standard -->
     <rule ref="Squiz.Commenting.ClassComment" />
     <rule ref="Squiz.Commenting.FileComment" />
-    <rule ref="Squiz.Commenting.FunctionComment" />
+    <!-- Unfortunately rules for comments are very strict (e.g. full stop at the end, etc. so leaving this for the moment..) -->
+    <!--<rule ref="Squiz.Commenting.FunctionComment" />-->
     <rule ref="Squiz.Commenting.VariableComment" />
 
     <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
