@@ -44,6 +44,9 @@
         </properties>
     </rule>
 
+    <!-- PHP code MUST NOT contain any character before the opening tag -->
+    <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag"/>
+
     <!-- Include some of the Squiz standard -->
     <rule ref="Squiz.Commenting.ClassComment" />
     <rule ref="Squiz.Commenting.FileComment" />
