@@ -1,9 +1,12 @@
 <?xml version="1.0"?>
-<ruleset name="Vianetz_CodeSniffer">
+<ruleset name="vianetz">
     <!-- This coding standard is based on the Zend Coding Standards but enhanced with several Sniffs from existing
          Standards -->
+    <!-- @see https://github.com/firegento/phpcs/blob/master/FireGento/ruleset.xml -->
 
     <description>The coding standard for vianetz projects.</description>
+
+    <!-- Exclude tests -->
     <exclude-pattern>*/Tests/*</exclude-pattern>
 
     <!-- Include the whole Zend standard -->
