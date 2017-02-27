@@ -27,6 +27,9 @@
 
         <!-- Exclude requirement for newline at the end of file -->
         <exclude name="PSR2.Files.EndFileNewline" />
+
+        <!-- Not relevant for Magento 1 -->
+        <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps" />
     </rule>
 
     <!-- Lines can be 180 chars long, but never show errors -->
@@ -48,8 +51,19 @@
     <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag"/>
 
     <!-- Include some of the Squiz standard -->
-    <rule ref="Squiz.Commenting.ClassComment" />
-    <rule ref="Squiz.Commenting.FileComment" />
+    <rule ref="Squiz.Commenting.ClassComment">
+        <exclude name="Squiz.Commenting.ClassComment.TagNotAllowed" />
+    </rule>
+    <rule ref="Squiz.Commenting.FileComment">
+        <!-- Package tag is not required for classes -->
+        <exclude name="Squiz.Commenting.FileComment.MissingPackageTag" />
+        <exclude name="Squiz.Commenting.FileComment.MissingSubpackageTag" />
+        <exclude name="Squiz.Commenting.FileComment.PackageTagOrder" />
+        <exclude name="Squiz.Commenting.FileComment.SubpackageTagOrder" />
+        <exclude name="Squiz.Commenting.FileComment.IncorrectAuthor" />
+        <exclude name="Squiz.Commenting.FileComment.AuthorTagOrder" />
+        <exclude name="Squiz.Commenting.FileComment.MissingCopyrightTag" />
+    </rule>
     <!-- Unfortunately rules for comments are very strict (e.g. full stop at the end, etc. so leaving this for the moment..) -->
     <!--<rule ref="Squiz.Commenting.FunctionComment" />-->
     <rule ref="Squiz.Commenting.VariableComment" />
