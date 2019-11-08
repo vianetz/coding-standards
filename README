@@ -1,5 +1,0 @@
-Install this to:
-/usr/local/opt/php55/lib/php/PHP/CodeSniffer/Standards/
-
-e.g. by
- sudo ln -s /Users/cma/workspace/vianetz_codesniffer/ruleset.xml /usr/local/opt/php55/lib/php/PHP/CodeSniffer/Standards/vianetz/ruleset.xml

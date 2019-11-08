@@ -1,0 +1,18 @@
+{
+    "name": "vianetz/coding-standard",
+    "type": "phpcodesniffer-standard",
+    "require": {
+        "doctrine/coding-standard": "^6.0"
+    }
+    ,
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christoph Massmann",
+            "email": "c.massmann@vianetz.com"
+        }
+    ]
+}

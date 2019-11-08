@@ -16,6 +16,8 @@
         <exclude name="Zend.NamingConventions.ValidVariableName"/>
     </rule>
 
+    <rule ref="Doctrine" />
+
     <!-- Include the whole PSR1+2 standards -->
     <rule ref="PSR2">
         <!-- Currently we have projects that do not use PSR1 required PHP namespaces so we have to exclude it here. -->
