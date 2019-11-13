@@ -1,37 +1,34 @@
 <?xml version="1.0"?>
 <ruleset name="vianetz">
-    <!-- This coding standard is based on the Zend Coding Standards but enhanced with several Sniffs from existing
-         Standards -->
-    <!-- @see https://github.com/firegento/phpcs/blob/master/FireGento/ruleset.xml -->
-
+    <!-- This coding standard is based on the Zend and Doctrine Coding Standards but enhanced with several Sniffs
+        from existing standards -->
     <description>The coding standard for vianetz projects.</description>
 
-    <!-- Exclude tests -->
-    <exclude-pattern>*/Tests/*</exclude-pattern>
-
-    <!-- Include the whole Zend standard -->
-    <rule ref="Zend">
-        <!-- This Zend standard rule does not recognize private variable names like __camelCase as correct camel case format
-             so we have to exclude it -->
-        <exclude name="Zend.NamingConventions.ValidVariableName"/>
+    <rule ref="Doctrine">
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming.SuperfluousSuffix"/>
     </rule>
 
-    <rule ref="Doctrine" />
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
+        <properties>
+            <property name="spacesCountBeforeColon" value="0"/>
+        </properties>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <property name="newlinesCountBetweenOpenTagAndDeclare" value="1"/>
+        </properties>
+    </rule>
 
     <!-- Include the whole PSR1+2 standards -->
     <rule ref="PSR2">
-        <!-- Currently we have projects that do not use PSR1 required PHP namespaces so we have to exclude it here. -->
-        <exclude name="PSR1.Classes.ClassDeclaration"/>
-
-        <!-- We want to prefix properties and methods with _ and __ to indicate visibility so we have to exclude it here -->
-        <exclude name="PSR2.Classes.PropertyDeclaration"/>
-        <exclude name="PSR2.Methods.MethodDeclaration"/>
-
         <!-- Exclude requirement for newline at the end of file -->
         <exclude name="PSR2.Files.EndFileNewline" />
 
-        <!-- Not relevant for Magento 1 -->
-        <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps" />
+        <exclude name="Squiz.Commenting.FileComment.Missing"/>
+        <exclude name="Squiz.Commenting.ClassComment.Missing"/>
+
+        <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSame"/>
     </rule>
 
     <!-- Lines can be 180 chars long, but never show errors -->

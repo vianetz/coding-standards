@@ -1,18 +1,21 @@
 {
-    "name": "vianetz/coding-standard",
-    "type": "phpcodesniffer-standard",
-    "require": {
-        "doctrine/coding-standard": "^6.0"
+  "name": "vianetz/coding-standard",
+  "type": "phpcodesniffer-standard",
+  "require": {
+    "squizlabs/php_codesniffer": "3.*",
+    "doctrine/coding-standard": "^6.0"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Christoph Massmann",
+      "email": "c.massmann@vianetz.com"
     }
-    ,
-    "require-dev": {
-        "roave/security-advisories": "dev-master"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Christoph Massmann",
-            "email": "c.massmann@vianetz.com"
-        }
-    ]
+  ],
+  "support": {
+    "email": "support@vianetz.com"
+  }
 }
