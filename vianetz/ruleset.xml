@@ -1,10 +1,16 @@
 <?xml version="1.0"?>
 <ruleset name="vianetz">
     <!-- This coding standard is based on the Zend and Doctrine Coding Standards but enhanced with several Sniffs
-        from existing standards -->
+        from existing standards
+        @see https://github.com/slevomat/coding-standard
+        @see https://github.com/doctrine/coding-standard/blob/master/lib/Doctrine/ruleset.xml
+        @see https://github.com/zendframework/zend-coding-standard/blob/master/ruleset.xml
+        @see https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Squiz/ruleset.xml
+        -->
     <description>The coding standard for vianetz projects.</description>
 
     <rule ref="Doctrine">
+        <!-- We want to allow Exception suffix -->
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming.SuperfluousSuffix"/>
     </rule>
 
@@ -17,6 +23,13 @@
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
         <properties>
             <property name="newlinesCountBetweenOpenTagAndDeclare" value="1"/>
+        </properties>
+    </rule>
+
+    <!-- Force no whitespace after a type cast -->
+    <rule ref="Generic.Formatting.SpaceAfterCast">
+        <properties>
+            <property name="spacing" value="0"/>
         </properties>
     </rule>
 
