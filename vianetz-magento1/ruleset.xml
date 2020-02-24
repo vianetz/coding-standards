@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ruleset name="vianetz-magento1">
+    <!-- This coding standard is based on the Zend but enhanced with several Sniffs
+        from existing standards
+        @see https://github.com/slevomat/coding-standard
+        @see https://github.com/zendframework/zend-coding-standard/blob/master/ruleset.xml
+        @see https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Squiz/ruleset.xml
+        -->
+    <description>The coding standard for vianetz Magento 1 projects.</description>
+
+    <rule ref="vianetz">
+        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+        <exclude name="Squiz.Classes.ClassFileName.NoMatch"/>
+        <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps"/>
+        <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFullyQualifiedNameWithoutNamespace"/>
+    </rule>
+</ruleset>

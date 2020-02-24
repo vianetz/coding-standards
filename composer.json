@@ -1,9 +1,10 @@
 {
-  "name": "vianetz/coding-standard",
+  "name": "vianetz/coding-standards",
   "type": "phpcodesniffer-standard",
   "require": {
     "squizlabs/php_codesniffer": "3.*",
-    "doctrine/coding-standard": "^6.0"
+    "doctrine/coding-standard": "^6.0",
+    "magento/magento-coding-standard": "*"
   },
   "require-dev": {
     "roave/security-advisories": "dev-master"
