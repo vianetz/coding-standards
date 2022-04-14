@@ -1,14 +1,15 @@
 {
   "name": "vianetz/coding-standards",
+  "description": "The vianetz phpcs coding standards.",
   "type": "phpcodesniffer-standard",
   "require": {
     "squizlabs/php_codesniffer": "3.*",
-    "doctrine/coding-standard": "^6.0",
+    "doctrine/coding-standard": "^9.0",
     "magento/magento-coding-standard": "*",
     "phpcompatibility/php-compatibility": "^9.3"
   },
   "require-dev": {
-    "roave/security-advisories": "dev-master"
+    "roave/security-advisories": "dev-latest"
   },
   "license": "GPL-3.0-or-later",
   "authors": [
