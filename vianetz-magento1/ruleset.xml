@@ -15,5 +15,6 @@
         <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFullyQualifiedNameWithoutNamespace"/>
         <exclude name="PSR2.Methods.MethodDeclaration.Underscore"/>
         <exclude name="PSR2.Classes.PropertyDeclaration.Underscore" />
+        <exclude name="SlevomatCodingStandard.PHP.RequireExplicitAssertion.RequiredExplicitAssertion" />
     </rule>
 </ruleset>

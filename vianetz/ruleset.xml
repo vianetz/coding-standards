@@ -56,6 +56,8 @@
         <exclude name="Squiz.Commenting.VariableComment.IncorrectVarType"/>
 
         <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSame"/>
+        <exclude name="PSR12.ControlStructures.ControlStructureSpacing.FirstExpressionLine"/>
+        <exclude name="PSR12.ControlStructures.ControlStructureSpacing.CloseParenthesisLine"/>
     </rule>
 
     <!-- Lines can be 180 chars long, but never show errors -->
@@ -111,6 +113,12 @@
         <properties>
             <property name="nestingLevel" value="5"/>
             <property name="absoluteNestingLevel" value="50"/>
+        </properties>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <property name="linesCountBeforeDeclare" value="0"/>
         </properties>
     </rule>
 </ruleset>
