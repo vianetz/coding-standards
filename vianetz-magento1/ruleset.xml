@@ -16,5 +16,16 @@
         <exclude name="PSR2.Methods.MethodDeclaration.Underscore"/>
         <exclude name="PSR2.Classes.PropertyDeclaration.Underscore" />
         <exclude name="SlevomatCodingStandard.PHP.RequireExplicitAssertion.RequiredExplicitAssertion" />
+
+        <!-- this has to be disabled for the require_once() statement in controller files -->
+        <exclude name="PSR1.Files.SideEffects.FoundWithSymbols" />
+    </rule>
+
+    <!-- Rule has been excluded in general vianetz ruleset because it should not be required when using namespaces but in Magento 1 we need it to group extensions -->
+    <rule ref="PEAR.Commenting.ClassComment.Missing">
+        <include-pattern type="relative">app/code/</include-pattern>
+    </rule>
+    <rule ref="PEAR.Commenting.ClassComment.MissingPackageTag">
+        <include-pattern type="relative">app/code/</include-pattern>
     </rule>
 </ruleset>

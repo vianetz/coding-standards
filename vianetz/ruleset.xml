@@ -19,21 +19,13 @@
         <exclude name="SlevomatCodingStandard.Commenting.DocCommentSpacing.IncorrectAnnotationsGroup" />
     </rule>
 
-    <!-- Run against the PHPCompatibility ruleset -->
-    <rule ref="PHPCompatibility"/>
-    <config name="testVersion" value="7.4-"/>
-
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
         <properties>
             <property name="spacesCountBeforeColon" value="0"/>
         </properties>
     </rule>
 
-    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
-        <properties>
-            <property name="newlinesCountBetweenOpenTagAndDeclare" value="1"/>
-        </properties>
-    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes" />
 
     <!-- Force no whitespace after a type cast -->
     <rule ref="Generic.Formatting.SpaceAfterCast">
@@ -42,11 +34,12 @@
         </properties>
     </rule>
 
-    <!-- Include the whole PSR1+2 standards -->
-    <rule ref="PSR2">
+    <!-- Include the whole PSR12 standards -->
+    <rule ref="PSR12">
         <!-- Exclude requirement for newline at the end of file -->
         <exclude name="PSR2.Files.EndFileNewline" />
-
+        <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock" />
+        <exclude name="PSR12.Files.FileHeader.IncorrectOrder" />
         <exclude name="Squiz.Commenting.FileComment.Missing"/>
         <exclude name="Squiz.Commenting.ClassComment.Missing"/>
         <exclude name="Squiz.Commenting.FileComment.CopyrightTagOrder"/>
@@ -83,8 +76,6 @@
         <exclude name="Squiz.Commenting.ClassComment.TagNotAllowed" />
     </rule>
     <rule ref="Squiz.Commenting.FileComment">
-        <!-- Package tag is not required for classes -->
-        <exclude name="Squiz.Commenting.FileComment.MissingPackageTag" />
         <exclude name="Squiz.Commenting.FileComment.MissingSubpackageTag" />
         <exclude name="Squiz.Commenting.FileComment.PackageTagOrder" />
         <exclude name="Squiz.Commenting.FileComment.SubpackageTagOrder" />

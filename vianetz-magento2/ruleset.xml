@@ -9,11 +9,18 @@
     <description>The coding standard for vianetz Magento 1 projects.</description>
 
     <rule ref="vianetz">
-        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
-        <exclude name="Squiz.Classes.ClassFileName.NoMatch"/>
-        <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps"/>
         <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFullyQualifiedNameWithoutNamespace"/>
     </rule>
 
-    <rule ref="Magento2"/>
+    <rule ref="Magento2">
+        <exclude name="Magento2.Annotation.MethodAnnotationStructure.MethodArguments.NoCommentBlock"/>
+        <exclude name="Magento2.Annotation.MethodArguments.NoCommentBlock"/>
+    </rule>
+
+    <rule ref="Generic.Files.LineLength"><!-- overwrite Magento standard -->
+        <properties>
+            <property name="lineLimit" value="200"/>
+            <property name="absoluteLineLimit" value="0"/>
+        </properties>
+    </rule>
 </ruleset>
