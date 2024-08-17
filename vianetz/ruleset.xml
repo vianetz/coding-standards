@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
 <ruleset name="vianetz">
-    <!-- This coding standard is based on the Zend and Doctrine Coding Standards but enhanced with several Sniffs
-        from existing standards
-        @see https://github.com/slevomat/coding-standard
-        @see https://github.com/doctrine/coding-standard/blob/master/lib/Doctrine/ruleset.xml
-        @see https://github.com/zendframework/zend-coding-standard/blob/master/ruleset.xml
-        @see https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Squiz/ruleset.xml
-        -->
+    <!-- This coding standard is based on Doctrine Coding Standards enhanced with several Sniffs
+         from existing standards
+         @see https://github.com/slevomat/coding-standard
+         @see https://github.com/doctrine/coding-standard/blob/master/lib/Doctrine/ruleset.xml
+         @see https://github.com/squizlabs/PHP_CodeSniffer/blob/master/src/Standards/Squiz/ruleset.xml
+         -->
     <description>The coding standard for vianetz projects.</description>
 
     <rule ref="Doctrine">
@@ -26,8 +25,6 @@
             <property name="spacesCountBeforeColon" value="0"/>
         </properties>
     </rule>
-
-    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes" />
 
     <!-- Force no whitespace after a type cast -->
     <rule ref="Generic.Formatting.SpaceAfterCast">
@@ -49,6 +46,7 @@
         <exclude name="Squiz.Commenting.FileComment.IncorrectCopyright"/>
         <exclude name="Squiz.Commenting.VariableComment.Missing"/>
         <exclude name="Squiz.Commenting.VariableComment.IncorrectVarType"/>
+        <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar"/>
 
         <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSame"/>
         <exclude name="PSR12.ControlStructures.ControlStructureSpacing.FirstExpressionLine"/>
@@ -93,7 +91,6 @@
     <rule ref="Generic.PHP.DeprecatedFunctions"/>
     <rule ref="Generic.PHP.DisallowShortOpenTag"/>
     <rule ref="Generic.Strings.UnnecessaryStringConcat"/>
-    <rule ref="Zend.Debug.CodeAnalyzer"/>
 
     <!-- Tweaks to metrics -->
     <rule ref="Generic.Metrics.CyclomaticComplexity">

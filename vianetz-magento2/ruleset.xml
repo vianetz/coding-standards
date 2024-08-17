@@ -10,6 +10,8 @@
 
     <rule ref="vianetz">
         <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFullyQualifiedNameWithoutNamespace"/>
+        <exclude name="SlevomatCodingStandard.PHP.RequireExplicitAssertion.RequiredExplicitAssertion" />
+        <exclude name="SlevomatCodingStandard.Classes.SuperfluousInterfaceNaming.SuperfluousSuffix" />
     </rule>
 
     <rule ref="Magento2">
@@ -17,6 +19,7 @@
         <exclude name="Magento2.Annotation.MethodArguments.NoCommentBlock"/>
         <exclude name="Magento2.Annotation.MethodArguments.ParamMissing"/>
         <exclude name="Magento2.Annotation.MethodArguments.ArgumentMissing"/>
+        <exclude name="Magento2.Commenting.ClassPropertyPHPDocFormatting.Missing" />
     </rule>
 
     <rule ref="Generic.Files.LineLength"><!-- overwrite Magento standard -->
