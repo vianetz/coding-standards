@@ -25,5 +25,8 @@
     "allow-plugins": {
       "dealerdirect/phpcodesniffer-composer-installer": true
     }
+  },
+  "replace": {
+    "rector/rector": "^1.0"
   }
 }
