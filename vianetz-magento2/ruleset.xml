@@ -14,6 +14,11 @@
         <exclude name="Magento2.Commenting.ClassPropertyPHPDocFormatting.Missing" />
     </rule>
 
+    <rule ref="Ecg">
+        <!-- lots of useful functions like assert() are excluded by default which makes not much sense -->
+        <exclude name="Ecg.Security.ForbiddenFunction.Found" />
+    </rule>
+
     <rule ref="Generic.Files.LineLength"><!-- overwrite Magento standard -->
         <properties>
             <property name="lineLimit" value="200"/>
